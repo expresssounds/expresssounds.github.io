@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Sounds</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #009688;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .sound-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sound-button {
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sound-button:hover {
+            transform: scale(1.1);
+        }
+
+        .sound-image {
+            max-width: 100px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+        }
+
+        .sound-name {
+            margin-top: 5px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Express Sounds</h1>
+
+    <div class="sound-container">
+        <div class="sound-button" onclick="playSound('1_fD2Qond.mp3')">
+            <img class="sound-image" src="boton.png" alt="Botón 1">
+            <div class="sound-name">Señora su hijo está viendo n0por</div>
+        </div>
+
+        <div class="sound-button" onclick="playSound('clash-brasil.mp3')">
+            <img class="sound-image" src="boton.png" alt="Botón 1">
+            <div class="sound-name">Clash brasil</div>
+        </div>
+
+        <div class="sound-button" onclick="playSound('en-el-mcdonalds-no-venden-donas-remix.mp3')">
+            <img class="sound-image" src="boton.png" alt="Botón 1">
+            <div class="sound-name">en el mcdonal no venden dona</div>
+        </div>
+
+        <div class="sound-button" onclick="playSound('goofy-ahh-sounds.mp3')">
+            <img class="sound-image" src="boton.png" alt="Botón 1">
+            <div class="sound-name">goofy ahh sounds</div>
+        </div>
+
+        <div class="sound-button" onclick="playSound('risa-ibai-online-audio-converter.mp3')">
+            <img class="sound-image" src="boton.png" alt="Botón 1">
+            <div class="sound-name">risa ibai</div>
+        </div>
+
+    </div>
+
+    <script>
+        function playSound(soundFile) {
+            var audio = new Audio(soundFile);
+            audio.play();
+        }
+    </script>
+
+
+<script>
+    var reproduciendoActualmente;
+
+    function playSound(archivoSonido) {
+        if (reproduciendoActualmente) {
+            reproduciendoActualmente.pause();
+            reproduciendoActualmente.currentTime = 0;
+        }
+
+        var audio = new Audio(archivoSonido);
+        audio.play();
+        reproduciendoActualmente = audio;
+    }
+</script>
+
+
+<script data-cfasync="false" src="//d9qjkk0othy76.cloudfront.net/?kkjqd=1011042"></script>
+
+<script data-cfasync="false" src="//d9qjkk0othy76.cloudfront.net/?kkjqd=1011043"></script>
+
+
+
+</body>
+</html>
